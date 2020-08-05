@@ -58,7 +58,7 @@ On the other hand, if you ONLY wish to place subdomains that are not used in MX 
 
 - Enter the domain that you want to protect in the 'Domain Name' text box
 
-- As this is an external domain, a message in a blue box should appear informing you that this domain is not in SafeDNS and will need to be setup via DNS changed.
+- As this is an external domain, a message in a blue box should appear informing you that this domain is not in SafeDNS and will need to be setup via DNS changes.
 
 - Select any additional features you'd like to add to this domain such as CDN or WAF by clicking the checkbox next to your chosen features.
 
@@ -106,13 +106,13 @@ Once a new domain has been added to DDoSx<sup>®</sup>, you will automatically b
 
 Alternatively, navigate to the main DDoSx<sup>®</sup> page on via the navigation bar on the left, click on the domain you want to configure, and then and click `Configure` tab.
 
-First, use the `Add Record` button to configure your root and subdomains' origin IP address. This will be the IP address that the request is forwarded to after being routed through DoSX<sup>®</sup>. This is usually your web server or load balancer's external IP address. 
+First, use the `Add Record` button to configure your root and subdomains' origin IP address. This will be the IP address that the request is forwarded to after being routed through DDoSX<sup>®</sup>. This is usually your web server or load balancer's external IP address. 
 
 ![configuredomain](files/ddosx_add_record.png)
 
-You can add multiple subdomains at once via the `Add Record` button. Once you're happy with your configure, press the `Confirm` button
+You can add multiple subdomains at once via the `Add Record` button. Once you're happy with your configuration, press the `Confirm` button
 
-The origin IP address of any of your subdomains (Including your root domain) can be changed by editing the IP in the text box shown under `Origin IP` for the specific record.
+The origin IP address of any of your subdomains (including your root domain) can be changed by editing the IP in the text box shown under `Origin IP` for the specific record.
 
 **Adding SSL Certificates**
 
@@ -179,7 +179,7 @@ Once you've added all the domains you need to test to your `hosts` file, save th
 
 If you're happy with how your site performs, you can make the required DNS changes with your current DNS provider to point traffic to DDoSx<sup>®</sup>.
 
-The process to change DNS record varies between providers, so we do recommended following your DNS providers documentation should you need assistance creating ALIAS, ANAME or CNAME records.
+The process to change DNS record varies between providers, so we do recommend following your DNS provider's documentation should you need assistance creating ALIAS, ANAME or CNAME records.
 
 To create these records, you will need to log into to your current DNS provider and delete and existing A, AAAA, ALIAS ANAME or CNAME records for the domain or sub domain you want to route through DDoSx<sup>®</sup>. Feel free to take a backup of your DNS configuration of your prover supports it. A screenshot may also be useful. 
 
@@ -216,7 +216,7 @@ You may wish to add further configuration on your origin server to work more clo
    Make sure all websites hosted on your origin server are behind DDoSx before applying these firewall rules. As doing so cut off access to any websites not protected by DDoSx<.
 ```
 
-Now that DDoSx<sup>®</sup> is configured for your domain, and requests going to your domain and via common name servers will be routed through DDoSx<sup>®</sup>, however, attackers commonly try to avoid proxies like DDoSx<sup>®</sup> by using custom DNS servers to make the domain resolve to your origin server's IP instead of DDoSx<sup>®</sup>, bypassing the protection it offers. Furthermore, an attacker may still be able to attack your origin server by sending requests to the IP directly, (http://185.234.39.17/ for example).
+Now DDoSx<sup>®</sup> is configured for your domain, and requests going to your domain and via common name servers will be routed through DDoSx<sup>®</sup>, however, attackers commonly try to avoid proxies like DDoSx<sup>®</sup> by using custom DNS servers to make the domain resolve to your origin server's IP instead of DDoSx<sup>®</sup>, bypassing the protection it offers. Furthermore, an attacker may still be able to attack your origin server by sending requests to the IP directly, (http://185.234.39.17/ for example).
 
 To prevent both these evasion methods, you can add firewall rules to only allow traffic on port TCP 443 and TCP 80 from our DDoSx<sup>®</sup> IP ranges mentioned below.
 
