@@ -40,6 +40,19 @@ Next, click the "Scan Remote Server" button which will have the migration tool c
 ![cPanel Transfer Select WHM](files/cpanel_transfertool2.PNG)
 
 When the scan completes, select the accounts you want to transfer to your server.
+
+```eval_rst
+.. note::
+   As of cPanel version 90 there has been an option "Live Transfer" which can be automatically enabled during site migration. This must be disabled before transfer is initiated as otherwise this will replace DNS records for your site with ones pointing to the destination server immediately, a highly undesirable outcome which can cause many issues.
+```
+To view the current status of the Live Transfer option for each site simply click the Default option on the right hand side of this domain
+
+![cPanel Transfer Tool Default Options Menu](files/cpanel_default_Livetransfer1.PNG)
+
+If you see the Live Transfer option 'Enabled' here then click the slider underneath to set this to 'Disabled', if you then select the "Apply To Other Selected Accounts" option on the right hand side this will disable Live Transfer for all other domains that have been selected.
+
+![cPanel Transfer Tool Default Options Menu](files/cpanel_default_Livetransfer2.PNG)
+
 After selecting what you want to transfer over, click the "Copy" button to start the migration
 
 ![cPanel Select scanned sites for migration](files/cpanel_transfertoolscannedplesk.PNG)
