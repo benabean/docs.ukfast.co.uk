@@ -47,7 +47,7 @@ Then, check whether there are any new disks of the requested additional size tha
 
 ### Example of resized disk
 
-Here you can see that the `/dev/sdb` device is showing as 26.1G, while the output from `pvs` for `/dev/sdb` is only 10G.
+Here you can see that the `/dev/sdb` device is showing as 16.1G, while the output from `pvs` for `/dev/sdb` is only 10G.
 
 ```bash
 [root@ssh ~]# fdisk -l
